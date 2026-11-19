@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beatrice Colombo Serri · Artista &amp; Creativa Visuale</title>
+<meta name="description" content="Beatrice Colombo Serri, artista e creativa visuale. Illustrazione, laboratori creativi e contenuti visivi.">
+<link rel="canonical" href="https://beatricecolomboserri.com/">
+<link rel="alternate" hreflang="it" href="https://beatricecolomboserri.com/">
+<link rel="alternate" hreflang="en" href="https://beatricecolomboserri.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://beatricecolomboserri.com/">
+<meta property="og:title" content="Beatrice Colombo Serri">
+<meta property="og:description" content="Dalla carta al digitale. Artista &amp; creativa visuale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beatricecolomboserri.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEEF1;
+  --ink:#0B1238;
+  --ink-deep:#060A22;
+  --pencil:#5B6070;
+  --signal:#FF5A36;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--signal);outline-offset:4px}
+
+.name{position:absolute;top:1.5rem;left:clamp(1.25rem,5vw,4rem);font-size:1rem;font-weight:800;letter-spacing:.01em;z-index:2}
+
+.lang{position:absolute;top:1.5rem;right:clamp(1.25rem,5vw,4rem);z-index:2;font-size:.95rem;font-weight:800;display:flex;gap:.9rem}
+.lang a{text-decoration:none;padding-bottom:2px;border-bottom:2px solid transparent}
+.lang a[aria-current]{border-bottom-color:var(--signal)}
+.lang a:hover{border-bottom-color:var(--ink)}
+
+/* Hero: carta sopra, digitale sotto */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-rows:1fr 1fr}
+.carta{
+  display:flex;align-items:flex-end;padding:0 clamp(1.25rem,5vw,4rem) 0;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(0,0,0,.035) 0 1px,transparent 1.5px) 0 0/7px 7px,
+    var(--paper);
+}
+.carta h1{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(3.5rem,13vw,12rem);line-height:.86;letter-spacing:-.03em;
+  transform:translateY(.12em);
+}
+.digitale{
+  position:relative;color:var(--paper);
+  background:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px) 0 0/28px 28px,
+    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px) 0 0/28px 28px,
+    var(--ink);
+  padding:0 clamp(1.25rem,5vw,4rem);
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding-bottom:2rem;
+}
+.digitale h2{
+  font-weight:800;font-size:clamp(3rem,11.4vw,10.5rem);line-height:.9;letter-spacing:-.045em;
+  padding-top:.3em;text-transform:lowercase;
+}
+.digitale h2 span{display:inline-block;animation:snap .9s steps(6) .2s both}
+@keyframes snap{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.role{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;font-size:1.05rem}
+.role a{font-weight:800;text-decoration:none;border-bottom:2px solid var(--signal);padding-bottom:2px}
+.role a:hover{background:var(--signal);color:var(--ink-deep)}
+
+/* Progetti */
+.works{padding:clamp(3rem,8vw,6rem) clamp(1.25rem,5vw,4rem);max-width:1100px;margin:auto}
+.works ul{list-style:none;padding:0}
+.works li{border-top:2px solid var(--ink)}
+.works li:last-child{border-bottom:2px solid var(--ink)}
+.works a{
+  display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:baseline;
+  padding:1.6rem 0;text-decoration:none;
+  transition:padding-left .25s,background .25s;
+}
+.works a:hover,.works a:focus-visible{padding-left:1.25rem;background:var(--ink);color:var(--paper)}
+.works .t{font-weight:800;font-size:clamp(1.8rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1}
+.works .d{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--pencil);display:block;margin-top:.5rem;letter-spacing:0}
+.works a:hover .d,.works a:focus-visible .d{color:#C9CEE8}
+.works .go{font-weight:800;font-size:.95rem;padding-right:1rem;white-space:nowrap}
+
+footer{background:var(--ink-deep);color:var(--paper);padding:3rem clamp(1.25rem,5vw,4rem);font-size:.98rem;line-height:1.6}
+footer .in{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+footer h3{font-size:1rem;font-weight:800;margin-bottom:.5rem}
+footer a{text-underline-offset:3px}
+footer a:hover{color:var(--signal)}
+footer .legal{max-width:1100px;margin:2.5rem auto 0;color:#9AA0C4;font-size:.85rem}
+
+@media (max-width:600px){
+  .works .go{display:none}
+  .works a{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .digitale h2 span{animation:none}
+  html{scroll-behavior:auto}
+  .works a{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="lang" aria-label="Lingua"><a href="/" aria-current="true">IT</a><a href="/en/">EN</a></nav>
+  <div class="name">Beatrice Colombo Serri</div>
+  <div class="carta"><h1>Dalla carta</h1></div>
+  <div class="digitale">
+    <h2><span>al digitale</span></h2>
+    <div class="role">
+      <p>Artista &amp; creativa visuale</p>
+      <a href="mailto:beatrice.colombo.serri@gmail.com">Per info e collaborazioni: scrivimi</a>
+    </div>
+  </div>
+</header>
+
+<main class="works" id="lavori">
+  <ul>
+    <li>
+      <a href="https://artiillustration.myportfolio.com/" target="_blank" rel="noopener">
+        <span><span class="t">Arte e illustrazione</span><span class="d">Arte su commissione e illustrazioni Poster.</span></span>
+        <span class="go">Scopri di più</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://officinaincorso.myportfolio.com/" target="_blank" rel="noopener">
+        <span><span class="t">Officina in Corso</span><span class="d">Laboratori creativi per bambini, adulti e famiglie.</span></span>
+        <span class="go">Scopri di più</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://bcsvisual.myportfolio.com/" target="_blank" rel="noopener">
+        <span><span class="t">Visual Works</span><span class="d">Contenuti visivi per brand, eventi e ospitalità.</span></span>
+        <span class="go">Scopri di più</span>
+      </a>
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <div class="in">
+    <div>
+      <h3>Contatti</h3>
+      <a href="tel:+393339868421">+39 333 986 8421</a><br>
+      <a href="mailto:beatrice.colombo.serri@gmail.com">beatrice.colombo.serri@gmail.com</a>
+    </div>
+    <div>
+      <h3>Online</h3>
+      <a href="https://www.instagram.com/b.eatricecolomboserri/" target="_blank" rel="noopener">Instagram</a><br>
+      <a href="https://www.linkedin.com/in/beatrice-colombo-serri-788b2a3b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <p class="legal">Partita IVA 09649490969 · Beatrice Colombo Serri © 2026</p>
+</footer>
+
+</body>
+</html>
